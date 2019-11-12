@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Text to Emoji</title>
+  
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+  
+</head>
+<body>
+    <div id="top-image">
+        
+        <hgroup class="col-4 col-sm-7 mx-auto">
+                <h1>Text to Emoji</h1>
+                <h3>Translator</h3>
+              </hgroup>
+              <form>
+                <div class="group">
+                  <input type="text" id="sentence"><span class="highlight"></span><span class="bar"></span>
+                  <label>Enter Text</label>
+                </div>
+                <div class="bttn-wrapper">
+                  <!-- <a href="http://127.0.0.1:5000/convert/starboy">Go</a> -->
+                        <button type="button" class="bttn button buttonBlue" >Translate
+                                <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+                              </button>
+                        
+                <div class="group">
+                  <input type="text"><span class="highlight"></span><span class="bar"></span>
+                  <label></label>
+                </div>
+            </div>
+                
+                
+              </form>
+              
+    
+    </div>
+    <script>window.$ = window.jQuery = require('jquery');</script>
+    <script  src="javas.js"></script>
+</body>
+
+</html>
