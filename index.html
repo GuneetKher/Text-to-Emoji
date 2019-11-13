@@ -24,13 +24,11 @@
                   <label>Enter Text</label>
                 </div>
                 <div class="bttn-wrapper">
-                  <!-- <a href="http://127.0.0.1:5000/convert/starboy">Go</a> -->
-                        <button type="button" class="bttn button buttonBlue" >Translate
-                                <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
-                              </button>
-                        
+                  <button type="button" onclick="fetchResult()" class="bttn button buttonBlue" >Translate
+                    <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+                  </button> 
                 <div class="group">
-                  <input type="text"><span class="highlight"></span><span class="bar"></span>
+                  <input type="text" id="result" value=" "><span class="highlight"></span><span class="bar"></span>
                   <label></label>
                 </div>
             </div>
@@ -42,6 +40,7 @@
     </div>
     <script>window.$ = window.jQuery = require('jquery');</script>
     <script  src="javas.js"></script>
+    
 </body>
 
 </html>

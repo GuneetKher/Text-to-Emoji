@@ -4,8 +4,6 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "dev": "npm-run-all --parallel lite start",
-    "lite": "lite-server",
     "start": " electron ."
   },
   "author": "",

@@ -225,3 +225,21 @@ window.addEventListener("resize", () => {
   height = window.innerHeight;
 });
 
+
+function fetchResult(){
+  console.log("fn called")
+  var str = document.getElementById("sentence").value;
+  console.log(str);
+  var xmlHttp = new XMLHttpRequest();
+  var url = "http://127.0.0.1:5000/convert/"+str
+  xmlHttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var res = xmlHttp.responseText;
+      var out = document.getElementById("result");
+      out.value=res;
+    }
+};
+  xmlHttp.open( "GET", url, false );
+  xmlHttp.send();
+  console.log(xmlHttp.responseText)
+}

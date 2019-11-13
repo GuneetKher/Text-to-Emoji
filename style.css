@@ -9,13 +9,13 @@ body {
 hgroup { 
 	text-align:center;
     margin-top: 4em;
-    background: rgba(55, 58, 62, 0.4);
+    background: rgba(197, 200, 202, 0.4);
     border-radius: 1em;
 }
 
 h1, h3 { font-weight: 300; }
 
-h1 { color: #2a2929; }
+h1 { color: #6e0e0e; }
 
 h3 { color: #032149; }
 
@@ -69,7 +69,7 @@ input:focus ~ label, input.used ~ label {
 	top: -20px;
   transform: scale(.75); left: -2px;
 	/* font-size: 14px; */
-	color: #4a89dc;
+	color: #4b8adc;
 }
 
 

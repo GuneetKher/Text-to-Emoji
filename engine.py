@@ -37,22 +37,24 @@ def most_similar(vectors, vec):
     return (np.argsort(-dst))[0],max(dst)
 
 
-sentences=["star boy","i love you","x marks the spot","the pizza is great","chicken lays eggs","games or a mobile ?","i have scored hundred in maths","She is the queen of hearts","messi is the king of soccer","lets build a rocket","I will dance at your wedding","i love my mother","coffee or tea","aliens have cool spaceships","india is the greatest","china is a wonderful country","good job","the terrorist bombed the church"]
+# sentences=["star boy","i love you","x marks the spot","the pizza is great","chicken lays eggs","games or a mobile ?","i have scored hundred in maths","She is the queen of hearts","messi is the king of soccer","lets build a rocket","I will dance at your wedding","i love my mother","coffee or tea","aliens have cool spaceships","india is the greatest","china is a wonderful country","good job","the terrorist bombed the church"]
 
 @app.route("/convert/<sentence>")
 def convert(sentence):
-    for sentence in sentences:
-        l=[]
-        for w in sentence.split(" "):
-            v = nlp(w.lower()).vector
-            ms,sim=most_similar(doc_vectors, v)
-            #print(sim)
-            if(sim>0.0115):
-                word=emo_get[ms]
-                l.append(emoji.emojize(word,use_aliases=True))
-            else:
-                l.append(w)
-        return ''.join([x for x in l])
+    print(sentence)
+    l=[]
+    for w in sentence.split(" "):
+        v = nlp(w.lower()).vector
+        ms,sim=most_similar(doc_vectors, v)
+        #print(sim)
+        if(sim>0.0115):
+            word=emo_get[ms]
+            l.append(emoji.emojize(word,use_aliases=True))
+        else:
+            l.append(w)
+    return ''.join([x for x in l])
+        
+    # for sentence in sentences:
         # display(HTML('<font size="+3">{}</font>'.format(' '.join([x for x in l]))))
 
 if __name__ == "__main__":

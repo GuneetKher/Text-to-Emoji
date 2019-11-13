@@ -1,20 +1,25 @@
 
 const { app, BrowserWindow } = require('electron')
-// const { pyshell } = require("python-shell")
+// const {pyshell}  = require("python-shell")
+// let {PythonShell} = require('python-shell')
 
+// console.log(PythonShell)
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let win
 
+//  PythonShell.runString('x=1+1;print(x)',  function (err) {
+//     if (err) {
+//       console.log(err)
+//     } 
+//     console.log('finished');
+//   });
 
 function createWindow () {
   
-  // pyshell.runString('x=1+1;print(x)',  function (err) {
-  //   if (err) throw err;
-  //   console.log('finished');
-  // });
+ 
   
-  // pyshell.run('engine.py',  function  (err, results)  {
+  // PythonShell.run('engine.py',  function  (err, results)  {
   //   if  (err)  console.log(err);
   //   console.log('engine.py finished.');
   //   console.log('results', results);
